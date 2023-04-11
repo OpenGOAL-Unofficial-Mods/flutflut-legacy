@@ -792,7 +792,7 @@
              )
          )
         (('ridden)
-         (if (or (not *target*) (not (logtest? (-> *target* control -core action) (collide-action ca-14))))
+         (if (not *target*) 
              (go elevator-travel-to-fort)
              )
          )
