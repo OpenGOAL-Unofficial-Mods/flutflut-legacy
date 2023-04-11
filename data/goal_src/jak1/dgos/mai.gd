@@ -20,7 +20,7 @@
   "baby-spider-ag.go"
   "cavetrapdoor-ag.go"
   "dark-crystal-ag.go"
-  "driller-lurker-ag.go"
+  ;;"driller-lurker-ag.go"
   "ecovalve-ag.go"
   "gnawer-ag.go"
   "launcherdoor-maincave-ag.go"

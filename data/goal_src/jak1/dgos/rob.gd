@@ -13,7 +13,7 @@
   "caveelevator-ag.go"
   "cavespatulatwo-ag.go"
   "cavetrapdoor-ag.go"
-  "driller-lurker-ag.go"
+  ;;"driller-lurker-ag.go"
   "ecovalve-ag.go"
   "plat-ag.go"
   "plat-eco-ag.go"

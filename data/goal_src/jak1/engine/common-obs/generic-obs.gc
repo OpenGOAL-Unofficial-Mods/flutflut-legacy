@@ -456,6 +456,7 @@
          (do-joint-math! self)
          )
         (('clone-anim)
+        ;;skipped
          (clone-anim-once
            (if (handle->process (-> self cur-target-handle))
                (the-as handle (-> self cur-target-handle))
@@ -1911,7 +1912,7 @@
 
 (defstate launcher-active (launcher)
   :event (behavior ((proc process) (arg1 int) (event-type symbol) (event event-message-block))
-    (when (or (= event-type 'touch) (= event-type 'attack))
+    (when (= event-type 'attack)
       (set! (-> self state-time) (-> *display* base-frame-counter))
       (send-event proc 'launch (-> self spring-height) (-> self camera) (-> self dest) (-> self seek-time))
       )

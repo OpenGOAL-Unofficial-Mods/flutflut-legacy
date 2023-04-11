@@ -13,6 +13,6 @@
   "dark-crystal-ag.go"
   "mother-spider-ag.go"
   "spider-egg-ag.go"
-  "water-anim-darkcave-ag.go"
+  ;;"water-anim-darkcave-ag.go"
   "darkcave-vis.go"
  ))
