@@ -55,6 +55,13 @@
           )
          )
        )
+        (('flut-attack)
+          (when (target-on-end-of-teetertotter? self)
+            (set! (-> self in-launch-window) #f)
+            (increment-success-for-hint (text-id misty-teetertotter))
+            (go teetertotter-launch)
+            )
+          )
       (('bonk)
        (when (target-on-end-of-teetertotter? self)
          (level-hint-spawn

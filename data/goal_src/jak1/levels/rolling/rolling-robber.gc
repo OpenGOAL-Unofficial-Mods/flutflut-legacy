@@ -271,6 +271,7 @@
          (set! f30-0 (- f30-0))
          )
         )
+      (*! f30-0 0.5)
       (set! (-> self speed) f30-0)
       f30-0
       )
@@ -626,7 +627,7 @@
       (if (< (vector-dot gp-1 (-> self tangent)) 0.0)
           (set! f0-1 (- f0-1))
           )
-      (set! (-> self speed) f0-1)
+      (set! (-> self speed) (* f0-1 0.5))
       )
     (ja-channel-push! 1 (seconds 0.2))
     (loop

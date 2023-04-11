@@ -1032,7 +1032,7 @@
 (defstate flutflutegg-idle (flutflutegg)
   :event (behavior ((proc process) (arg1 int) (event-type symbol) (event event-message-block))
     (when (and (= event-type 'attack)
-               (or (= (-> event param 1) 'punch) (= (-> event param 1) 'spin) (= (-> event param 1) 'spin-air))
+                (or (= (-> event param 1) 'punch) (= (-> event param 1) 'spin) (= (-> event param 1) 'spin-air)(or (= (-> event param 1) 'flut-attack) (= (-> event param 1) 'flut)))
                (!= (-> self incomming-attack-id) (-> event param 2))
                )
       (set! (-> self incomming-attack-id) (-> event param 2))
@@ -1128,7 +1128,7 @@
       object
       (when (and (>= (- (-> *display* base-frame-counter) (-> self state-time)) (seconds 0.5))
                  (= event-type 'attack)
-                 (or (= (-> event param 1) 'punch) (= (-> event param 1) 'spin) (= (-> event param 1) 'spin-air))
+                 (or (= (-> event param 1) 'punch) (= (-> event param 1) 'spin) (= (-> event param 1) 'spin-air) (= (-> event param 1) 'flut-attack) (= (-> event param 1) 'flut))
                  (!= (-> self incomming-attack-id) (-> event param 2))
                  )
         (set! (-> self incomming-attack-id) (-> event param 2))
