@@ -1846,7 +1846,7 @@
           )
         )
       (if (and (= (-> self game mode) 'play) (>= 0.0 (-> self fact-info-target health)))
-          ((go target-flut-death (-> gp-0 mode)))
+          (go target-flut-death (-> gp-0 mode))
           )
       )
     (go target-flut-hit-ground)
