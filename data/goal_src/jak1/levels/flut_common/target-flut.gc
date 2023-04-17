@@ -1845,7 +1845,7 @@
             )
           )
         )
-      (if (and (not (= (-> *target* current-level name) 'firecanyon))(= (-> self game mode) 'play) (>= 0.0 (-> self fact-info-target health)))
+      (if (and (= (-> self game mode) 'play) (>= 0.0 (-> self fact-info-target health)))
           (go target-flut-death (-> gp-0 mode))
           )
       )
