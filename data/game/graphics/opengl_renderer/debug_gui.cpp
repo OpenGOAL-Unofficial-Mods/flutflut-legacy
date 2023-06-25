@@ -4,6 +4,7 @@
 #include <algorithm>
 
 #include "game/graphics/gfx.h"
+#include "game/kernel/svnrev.h"
 
 #include "third-party/imgui/imgui.h"
 

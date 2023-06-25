@@ -145,10 +145,6 @@ void TFragment::draw_debug_window() {
   m_tfrag3.draw_debug_window();
 }
 
-void TFragment::init_shaders(ShaderLibrary& shaders) {
-  m_tfrag3.init_shaders(shaders);
-}
-
 void TFragment::handle_initialization(DmaFollower& dma) {
   // Set up test (different between different renderers)
   auto setup_test = dma.read_and_advance();

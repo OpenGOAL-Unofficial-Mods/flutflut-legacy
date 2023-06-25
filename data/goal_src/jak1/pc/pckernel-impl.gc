@@ -55,8 +55,6 @@
 ;;;; debug settings
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(define *fallback-text-lookup?* #t)
-
 (define *display-bug-report* #f)
 
 (define *mood-override-debug* #f)

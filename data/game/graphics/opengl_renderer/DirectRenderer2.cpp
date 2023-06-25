@@ -352,8 +352,14 @@ void DirectRenderer2::setup_opengl_tex(u16 unit,
   }
 
   if (!tex) {
-    lg::warn("Failed to find texture at {}, using random (direct2: {})", tbp_to_lookup, m_name);
-    tex = render_state->texture_pool->get_placeholder_texture();
+    // TODO Add back
+    if (tbp_to_lookup >= 8160 && tbp_to_lookup <= 8600) {
+      lg::warn("Failed to find texture at {}, using random (eye zone)", tbp_to_lookup);
+      tex = render_state->texture_pool->get_placeholder_texture();
+    } else {
+      lg::warn("Failed to find texture at {}, using random (direct2: {})", tbp_to_lookup, m_name);
+      tex = render_state->texture_pool->get_placeholder_texture();
+    }
   }
 
   glActiveTexture(GL_TEXTURE0 + unit);
